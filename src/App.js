@@ -1,4 +1,6 @@
-// import "./styles.css";
+import React from "react";
+import "./styles.css";
+import { ParentBlock } from "./components/ParentBlock";
 
 //// Задания (массивы и стрелочные ф-ии)
 
@@ -19,26 +21,26 @@
 
 //// Задача 2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-export default function App() {
-  const messages = [
-    { message: "hello", error: true },
-    { message: "javascript", error: false },
-    { message: "lincode", error: true },
-    { message: "react", error: true },
-    { message: "angular", error: false },
-    { message: "es6", error: false },
-  ];
+// export default function App() {
+//   const messages = [
+//     { message: "hello", error: true },
+//     { message: "javascript", error: false },
+//     { message: "lincode", error: true },
+//     { message: "react", error: true },
+//     { message: "angular", error: false },
+//     { message: "es6", error: false },
+//   ];
 
-  // const maped = messages.map((message) => message.error);
-  const filtered = messages.filter((item) => item.error === "false");
-  const mapped = filtered.map((itemList) => <li> {itemList} </li>);
+//   // const maped = messages.map((message) => message.error);
+//   const filtered = messages.filter((item) => item.error === "false");
+//   const mapped = filtered.map((itemList) => <li> {itemList} </li>);
 
-  return (
-    <div className="App">
-      <ul>{mapped}</ul>
-    </div>
-  );
-}
+//   return (
+//     <div className="App">
+//       <ul>{mapped}</ul>
+//     </div>
+//   );
+// }
 
 //// Задача 3 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -115,3 +117,47 @@ export default function App() {
 //   }
 //   return true;
 // }
+
+//// Тернарный оператор
+
+//Задача 1
+
+// function App(props) {
+//   const isDay = props.hours > 18;
+
+//   return isDay ? "сейчас день" : "сейчас вечер"; // Выведет "сейчас вечер"
+// }
+
+// Задача 2
+
+// function BadComponent(props) {
+//   return(
+//     <div>
+//       {props ? "первый текст" : "второй текст"} // Всегда выводит "первый текст", потому что всегда true из-за отсутствия условия
+//     </div>
+//   );
+// }
+
+// Задача 3
+
+// function App() {
+//   const dark = true;
+
+//   return (
+//     <div>
+//       {dark ? <div className="dark"></div> : <div className="light"></div>}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// Задача 4 !!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+export default function App() {
+  return (
+    <div className="App">
+      <ParentBlock />
+    </div>
+  );
+}
